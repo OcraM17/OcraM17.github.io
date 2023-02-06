@@ -1,0 +1,57 @@
+ <style>
+      .skills-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+      }
+
+      .skills-column {
+        flex-basis: calc(33.33% - 2rem);
+        padding: 1rem;
+      }
+      
+    </style>
+  <body>
+    <div class="skills-container">
+      <div class="skills-column">
+      <h2 class="mb-3">{{ include.title }}</h2>
+    	{% for skill in include.source %}
+	  <div class="row justify-content-between align-items-center">
+      <div class="col-10">
+      <p class="mb-1"> 🌱 {{ skill.name }}</p>
+    </div>
+  </div>
+  {% endfor %}
+      </div>
+      <div class="skills-column">
+       <h2 class="mb-3">Frameworks and Tech</h2>
+	  <div class="row justify-content-between align-items-center">
+      <div class="col-10">
+      <p class="mb-1"> 🏄‍♂️ PyTorch</p>
+      <p class="mb-1"> 🏄‍♂️ Numpy</p>
+      <p class="mb-1"> 🏄‍♂️ Pandas</p>
+      <p class="mb-1"> 🏄‍♂️ Matplotlib</p>
+      <p class="mb-1"> 🏄‍♂️ Scikit-Learn</p>
+      <p class="mb-1"> 🏄‍♂️ Tensorflow</p>
+      <p class="mb-1"> 🏄‍♂️ Git</p>
+      <p class="mb-1"> 🏄‍♂️ Linux</p>
+      <p class="mb-1"> 🏄‍♂️ Anaconda</p>
+    </div>
+  </div>
+  </div>
+      <div class="skills-column">
+       <h2 class="mb-3">Research Interests</h2>
+	  <div class="row justify-content-between align-items-center">
+      <div class="col-10">
+      <p class="mb-1"> 👨‍🔬 Computer Vision</p>
+      <p class="mb-1"> 👨‍🔬 Image Processing</p>
+      <p class="mb-1"> 👨‍🔬 Deep Learning</p>
+      <p class="mb-1"> 👨‍🔬 Neural Networks</p>
+      <p class="mb-1"> 👨‍🔬 Reinforcement Learning</p>
+      <p class="mb-1"> 👨‍🔬 Continual Learning</p>
+      <p class="mb-1"> 👨‍🔬 Self-Supervised Learning</p>
+      <p class="mb-1"> 👨‍🔬 Graph Neural Networks</p>
+      <p class="mb-1"> 👨‍🔬 Data Analysis</p>
+    </div>
+  </div>
+      

@@ -2,11 +2,10 @@
 layout: page
 permalink: /skills/
 title: Skills
-description: Materials for courses you taught. Replace this text with your description.
+description: Discover my areas of expertise in the field of technology on this page. Explore the programming languages I have mastered, the frameworks I have worked with, and the research topics I am passionate about!
 nav: true
 nav_order: 4
 ---
 
-For now, this page is assumed to be a static description of your courses. You can convert it to a collection similar to `_projects/` so that you can have a dedicated page for each course.
+{% include skills.html title="Programming Skills" source=site.data.programming-skills %}
 
-Organize your courses by years, topics, or universities, however you like!

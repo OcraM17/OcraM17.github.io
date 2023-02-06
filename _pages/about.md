@@ -11,7 +11,7 @@ profile:
   address: >
 
 news: true  # includes a list of news items
-selected_papers: true # includes a list of papers marked as "selected={true}"
+selected_papers: false # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
@@ -24,3 +24,5 @@ When I'm not busy nerding out about computer science, I love sports, especially 
 I'm currently based in Pavia, Italy, a university city near Milan. In March 2022, I lived for 6 months in the amazing Barcelona, Spain, where I was a research intern at the Computer Vision Center. Before that, I spent 6 months in Ljubljana, Slovenia, a breathtaking city surrounded by nature. Here is where I worked on my Master's thesis and even though it was March 2020, I still managed to get it done while working half the time from home!
 
 So, that's a quick rundown of who I am and what I'm up to. I hope you find my journey and research as exciting as I do!
+
+
