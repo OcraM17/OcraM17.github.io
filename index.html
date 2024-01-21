@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
+    <title>Pippo Pelly</title>
+    <style>
+        /* Custom styles */
+        .container {
+            width: 100%; /* Full width */
+            max-width: none; /* Remove max-width */
+            margin: auto;
+            padding: 0 1.5rem; /* Padding on the sides */
+        }
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem; /* Space between columns */
+            text-align: center; /* Center text alignment */
+        }
+        @media (max-width: 768px) {
+            .grid {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .header {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            .name, .bio {
+                order: 2; /* Name and bio come after the photo on small screens */
+            }
+            .photo-box {
+                order: 1; /* Photo comes first on small screens */
+                margin-bottom: 1rem;
+            }
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Space out header elements */
+            flex-wrap: wrap;
+            gap: 1rem;
+            padding: 1rem 2rem; /* Padding on the sides */
+        }
+        .name {
+            flex-basis: 100%; /* Name takes full width */
+            text-align: left; /* Align name to the left */
+            font-size: 2.5rem; /* Larger font size for name */
+            order: 0;
+        }
+        .photo-box {
+            width: 300px;
+            height: 300px;
+            background: url('https://via.placeholder.com/200') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            order: 2;
+        }
+        section h2 {
+            font-size: 1.5rem;
+            font-weight: bold;
+        }
+        .item {
+            margin-bottom: 1rem;
+        }
+        .title {
+            font-weight: bold;
+        }
+        .subtitle {
+            font-size: 0.9rem;
+            color: #555;
+        }
+        .description {
+            font-size: 0.9rem;
+            margin-top: 0.25rem;
+        }
+        ul.custom-list {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: inherit;
+            padding: 0.5rem;
+        }
+        .publication-links {
+            margin-top: 0.5rem;
+        }
+        .publication-links a {
+            margin-right: 10px;
+            text-decoration: none;
+            color: #007bff;
+        }
+        .publication-links a:last-child {
+            margin-right: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <div class="name"><strong>Pippo Pelly</strong></div>
+            <div class="grid">
+                <section>
+                    <div class="photo-box">
+                        <img src="./assets/photo.jpeg" alt="Pippo Pelly">
+                    </div>
+                </section>
+                <section>
+                    <div class="bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                </section>
+                <section>
+                    <nav>
+                        <ul>
+                            <li><a href="https://www.linkedin.com/in/pippopelly" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://scholar.google.com/citations?user=pippopelly" target="_blank">Scholar</a></li>
+                            <li><a href="https://github.com/pippopelly" target="_blank">GitHub</a></li>
+                            <li><a href="mailto:pippopelly@example.com">Mail</a></li>
+                            <li><a href="/path-to-pippo-pelly-cv.pdf" role="button" download="Pippo_Pelly_CV.pdf">CV</a></li>
+                        </ul>
+                    </nav>
+                </section>
+            </div>
+        </header>
+        <main>
+            <div class="grid">
+                <section>
+                    <h2>Education</h2>
+                    <ul class="custom-list">
+                        <li class="item">
+                            <div class="title">Degree @ University</div>
+                            <div class="subtitle">from MM/YYYY to MM/YYYY</div>
+                            <div class="description">Short description of the program, major, and any honors received.</div>
+                        </li>
+                        <!-- Add more education items here -->
+                    </ul>
+                    <h2>Experience</h2>
+                    <ul class="custom-list">
+                        <li class="item">
+                            <div class="title">Position @ Company</div>
+                            <div class="subtitle">from MM/YYYY to MM/YYYY</div>
+                            <div class="description">Short description of responsibilities and achievements.</div>
+                        </li>
+                        <!-- Add more experience items here -->
+                    </ul>
+                </section>
+                <section>
+                    <h2>News</h2>
+                    <ul class="custom-list">
+                        <li class="item">News Item 1</li>
+                        <!-- Add more news items here -->
+                    </ul>
+                </section>
+                <section>
+                    <h2>Publications</h2>
+                    <ul class="custom-list">
+                        <li class="item">
+                            <div class="title">Publication Name</div>
+                            <div class="subtitle">Authors</div>
+                            <div class="publication-links">
+                                <a href="https://github.com/pippopelly/publication-repo" target="_blank">GitHub</a>
+                                <a href="/path-to-publication-pippo-pelly.pdf" target="_blank" download>PDF</a>
+                                <a href="/path-to-publication-pippo-pelly.bib" target="_blank" download>BibTeX</a>
+                            </div>
+                        </li>
+                        <!-- Add more publication items here -->
+                    </ul>
+                    <h2>Research Interests</h2>
+                    <ul class="custom-list">
+                        <li class="item">Research Interest 1</li>
+                        <!-- Add more research interests here -->
+                    </ul>
+                </section>
+            </div>
+        </main>
+        <footer>
+            <small>
+                <a href="https://www.privacypolicy.com" target="_blank">Privacy Policy</a> •
+                <a href="https://www.termsofuse.com" target="_blank">Terms of Use</a>
+            </small>
+        </footer>
+    </div>
+</body>
+</html>
