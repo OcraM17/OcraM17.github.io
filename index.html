@@ -4,154 +4,94 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>Pippo Pelly</title>
+    <title>Marco Cotogni</title>
     <style>
-        /* Custom styles */
         .container {
-            width: 100%; /* Full width */
-            max-width: none; /* Remove max-width */
+            width: 100%;
             margin: auto;
-            padding: 0 1.5rem; /* Padding on the sides */
-        }
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 2rem; /* Space between columns */
-            text-align: center; /* Center text alignment */
-        }
-        @media (max-width: 768px) {
-            .grid {
-                grid-template-columns: 1fr;
-                gap: 1rem;
-            }
-            .header {
-                flex-direction: column;
-                align-items: center;
-                text-align: center;
-            }
-            .name, .bio {
-                order: 2; /* Name and bio come after the photo on small screens */
-            }
-            .photo-box {
-                order: 1; /* Photo comes first on small screens */
-                margin-bottom: 1rem;
-            }
+            padding: 0 2rem;
         }
         .header {
-            display: flex;
-            align-items: center;
-            justify-content: space-between; /* Space out header elements */
-            flex-wrap: wrap;
-            gap: 1rem;
-            padding: 1rem 2rem; /* Padding on the sides */
+            text-align: center;
+            padding: 2rem 6rem;
         }
+        
+        .header {
+            text-align: justify;
+        }
+
         .name {
-            flex-basis: 100%; /* Name takes full width */
-            text-align: left; /* Align name to the left */
-            font-size: 2.5rem; /* Larger font size for name */
-            order: 0;
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 1rem;
+
         }
-        .photo-box {
+        .header-columns {
+            display: flex;
+            justify-content: space-between;
+        }
+        .photo-box img {
             width: 300px;
             height: 300px;
-            background: url('https://via.placeholder.com/200') no-repeat center center;
-            background-size: cover;
             border-radius: 50%;
-            order: 2;
+            object-fit: cover;
         }
-        section h2 {
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        .item {
-            margin-bottom: 1rem;
-        }
-        .title {
-            font-weight: bold;
-        }
-        .subtitle {
-            font-size: 0.9rem;
-            color: #555;
-        }
-        .description {
-            font-size: 0.9rem;
-            margin-top: 0.25rem;
-        }
-        ul.custom-list {
+        .nav-links ul {
             list-style-type: none;
             padding: 0;
             margin: 0;
         }
-        nav ul {
-            display: flex;
-            justify-content: center;
-            list-style: none;
-            padding: 0;
+        
+        .grid {
+            display: grid;
+            width: 100%;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0 3rem;
+            text-align: center;
+            padding: 0 3em;
         }
-        nav ul li a {
+
+        .nav-links ul li a {
             text-decoration: none;
             color: inherit;
-            padding: 0.5rem;
-        }
-        .publication-links {
-            margin-top: 0.5rem;
-        }
-        .publication-links a {
-            margin-right: 10px;
-            text-decoration: none;
-            color: #007bff;
-        }
-        .publication-links a:last-child {
-            margin-right: 0;
+            display: block; /* make the links stack vertically */
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header class="header">
-            <div class="name"><strong>Pippo Pelly</strong></div>
-            <div class="grid">
-                <section>
-                    <div class="photo-box">
-                        <img src="./assets/photo.jpeg" alt="Pippo Pelly">
-                    </div>
-                </section>
-                <section>
-                    <div class="bio">Hey there! I'm Marco, a 27-year-old Ph.D. 
-                        student in Computer Science at the University of Pavia, Italy. 
-                        My thesis is about analyzing and developing deep and reinforcement learning algorithms for image enhancement. 
-                        Pretty cool right?
-
-                        I'm into a bunch of different areas in Deep Learning, Computer Vision, 
-                        and Image Processing, like Continual Learning, Neural Networks, 
-                        Self-Supervised Learning, Image Translation and Generation.
-
-                        When I'm not busy nerding out about computer science, I love sports, 
-                        especially soccer and basketball. I'm also a nature lover and traveller.
-                        
-                        I'm currently based in Pavia, Italy, a university city near Milan. 
-                        In March 2022, I lived for 6 months in the amazing Barcelona, Spain, where I was a research intern 
-                        at the Computer Vision Center. Before that, I spent 6 months in Ljubljana, Slovenia, 
-                        a breathtaking city surrounded by nature. Here is where I worked on my Master's thesis and 
-                        even though it was March 2020, I still managed to get it done while working half the time from home!
-                        
-                        So, that's a quick rundown of who I am and what I'm up to. I hope 
-                        you find my journey and research as exciting as I do
-                    </div>
-                </section>
-                <section>
-                    <nav>
-                        <ul>
-                            <li><a href="https://www.linkedin.com/in/pippopelly" target="_blank">LinkedIn</a></li>
-                            <li><a href="https://scholar.google.com/citations?user=pippopelly" target="_blank">Scholar</a></li>
-                            <li><a href="https://github.com/pippopelly" target="_blank">GitHub</a></li>
-                            <li><a href="mailto:pippopelly@example.com">Mail</a></li>
-                            <li><a href="/path-to-pippo-pelly-cv.pdf" role="button" download="Pippo_Pelly_CV.pdf">CV</a></li>
-                        </ul>
-                    </nav>
-                </section>
+            <div class="name">Marco Cotogni</div>
+            <div class="header-columns">
+                <div class="photo-box">
+                    <img src="./assets/photo.jpeg" alt="Pippo Pelly">
+                </div>
+                <nav class="nav-links">
+                    <ul>
+                        <li><a href="https://www.linkedin.com/in/marco-cotogni/" target="_blank">LinkedIn</a></li>
+                        <li><a href="https://scholar.google.com/citations?user=8PUz5lAAAAAJ&hl=it" target="_blank">Scholar</a></li>
+                        <li><a href="https://github.com/OcraM17" target="_blank">GitHub</a></li>
+                        <li><a href="mailto:cotogni@proton.me">Mail</a></li>
+                        <li><a href="./assets/New_CV.pdf" role="button" download="Pippo_Pelly_CV.pdf">CV</a></li>
+                    </ul>
+                </nav>
             </div>
+            <div class="bio">Hey there! I'm Marco, a 27-year-old Research Scientist @ Leonardo Labs and a Ph.D. Candidate in Computer Science at the University of Pavia, Italy. 
+                <br><br>
+                I'm into a bunch of different areas in Deep Learning, Computer Vision, and Image Processing, like Continual Learning,
+                Computational Photography, Privacy in Computer Vision and Generative Models.
+                <br><br>
+                I'm currently based in Pavia, Italy, a university city near Milan.
+                In March 2022, I lived for 6 months in the amazing Barcelona, Spain, where I was a research intern at the Computer Vision Center.
+                Before that, I spent 6 months in Ljubljana, Slovenia, a breathtaking city surrounded by nature.
+                Here is where I worked on my Master's thesis and even though it was March 2020, I still managed to get it done while working half the time from home!
+                <br><br>
+                When I'm not busy nerding out about computer science, I love sports, especially soccer and basketball. I'm also a nature lover and traveller.
+                <br><br>
+                So, that's a quick rundown of who I am and what I'm up to. I hope you find my journey and research as exciting as I do!
+                </div>
         </header>
+    </div>
         <main>
             <div class="grid">
                 <section>
@@ -209,6 +149,6 @@
                 <a href="https://www.termsofuse.com" target="_blank">Terms of Use</a>
             </small>
         </footer>
-    </div>
+    
 </body>
 </html>
