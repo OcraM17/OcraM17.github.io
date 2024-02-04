@@ -56,6 +56,29 @@
             color: inherit;
             display: block; /* make the links stack vertically */
         }
+
+        @media (max-width: 768px) {
+            .header-columns {
+                flex-direction: column;
+            }
+            .photo-box, .bio, .nav-links {
+                flex-grow: 0;
+                width: 100%;
+                text-align: center;
+            }
+            .nav-links ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+            .name {
+                font-size: 1.5rem;
+                margin-bottom: 0.5rem;
+            }
+            .photo-box img {
+                width: 80px;
+                height: 80px;
+            }
+        }
     </style>
 </head>
 <body>
