@@ -2,176 +2,95 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css">
-    <title>Marco Cotogni</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pippo Pelly</title>
     <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
         .container {
-            width: 100%;
+            max-width: 1200px;
             margin: auto;
-            padding: 0 2rem;
+            padding: 0 15px;
         }
-        .header {
+        header, nav, main, footer {
+            padding: 20px;
+        }
+        header {
+            background: #333;
+            color: #fff;
             text-align: center;
-            padding: 2rem 6rem;
         }
-        
-        .header {
-            text-align: justify;
-        }
-
-        .name {
-            font-size: 2.5rem;
-            text-align: center;
-            margin-bottom: 1rem;
-
-        }
-        .header-columns {
+        nav ul {
+            list-style: none;
+            padding: 0;
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
+            gap: 10px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: #333;
+        }
+        main {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .photo-box, .bio, .links {
+            flex: 1;
+            min-width: 300px;
         }
         .photo-box img {
-            width: 300px;
-            height: 300px;
+            max-width: 100%;
+            height: auto;
             border-radius: 50%;
-            object-fit: cover;
         }
-        .nav-links ul {
-            list-style-type: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .grid {
-            display: grid;
-            width: 100%;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 0 3rem;
+        footer {
+            background: #333;
+            color: #fff;
             text-align: center;
-            padding: 0 3em;
         }
-
-        .nav-links ul li a {
-            text-decoration: none;
-            color: inherit;
-            display: block; /* make the links stack vertically */
-        }
-
         @media (max-width: 768px) {
-            .header-columns {
+            nav ul {
                 flex-direction: column;
+                align-items: center;
             }
-            .photo-box, .bio, .nav-links {
-                flex-grow: 0;
-                width: 100%;
-                text-align: center;
-            }
-            .nav-links ul {
-                flex-direction: column;
-                gap: 0.5rem;
-            }
-            .name {
-                font-size: 1.5rem;
-                margin-bottom: 0.5rem;
-            }
-            .photo-box img {
-                width: 80px;
-                height: 80px;
+            .photo-box, .bio, .links {
+                min-width: 100%;
             }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header class="header">
-            <div class="name">Marco Cotogni</div>
-            <div class="header-columns">
-                <div class="photo-box">
-                    <img src="./assets/photo.jpeg" alt="Pippo Pelly">
-                </div>
-                <nav class="nav-links">
-                    <ul>
-                        <li><a href="https://www.linkedin.com/in/marco-cotogni/" target="_blank">LinkedIn</a></li>
-                        <li><a href="https://scholar.google.com/citations?user=8PUz5lAAAAAJ&hl=it" target="_blank">Scholar</a></li>
-                        <li><a href="https://github.com/OcraM17" target="_blank">GitHub</a></li>
-                        <li><a href="mailto:cotogni@proton.me">Mail</a></li>
-                        <li><a href="./assets/New_CV.pdf" role="button">CV</a></li>
-                    </ul>
-                </nav>
-            </div>
-            <div class="bio">Hey there! I'm Marco, a 27-year-old Research Scientist @ Leonardo Labs and a Ph.D. Candidate in Computer Science at the University of Pavia, Italy. 
-                <br><br>
-                I'm into a bunch of different areas in Deep Learning, Computer Vision, and Image Processing, like Continual Learning,
-                Computational Photography, Privacy in Computer Vision and Generative Models.
-                <br><br>
-                I'm currently based in Pavia, Italy, a university city near Milan.
-                In March 2022, I lived for 6 months in the amazing Barcelona, Spain, where I was a research intern at the Computer Vision Center.
-                Before that, I spent 6 months in Ljubljana, Slovenia, a breathtaking city surrounded by nature.
-                Here is where I worked on my Master's thesis and even though it was March 2020, I still managed to get it done while working half the time from home!
-                <br><br>
-                When I'm not busy nerding out about computer science, I love sports, especially soccer and basketball. I'm also a nature lover and traveller.
-                <br><br>
-                So, that's a quick rundown of who I am and what I'm up to. I hope you find my journey and research as exciting as I do!
-                </div>
+        <header>
+            <h1>Pippo Pelly</h1>
         </header>
-    </div>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/pippopelly">LinkedIn</a></li>
+                <li><a href="https://scholar.google.com/citations?user=pippopelly">Scholar</a></li>
+                <li><a href="https://github.com/pippopelly">GitHub</a></li>
+                <li><a href="mailto:pippopelly@example.com">Mail</a></li>
+                <li><a href="/path-to-pippo-pelly-cv.pdf" download="Pippo_Pelly_CV.pdf">CV</a></li>
+            </ul>
+        </nav>
         <main>
-            <div class="grid">
-                <section>
-                    <h2>Education</h2>
-                    <ul class="custom-list">
-                        <li class="item">
-                            <div class="title">Degree @ University</div>
-                            <div class="subtitle">from MM/YYYY to MM/YYYY</div>
-                            <div class="description">Short description of the program, major, and any honors received.</div>
-                        </li>
-                        <!-- Add more education items here -->
-                    </ul>
-                    <h2>Experience</h2>
-                    <ul class="custom-list">
-                        <li class="item">
-                            <div class="title">Position @ Company</div>
-                            <div class="subtitle">from MM/YYYY to MM/YYYY</div>
-                            <div class="description">Short description of responsibilities and achievements.</div>
-                        </li>
-                        <!-- Add more experience items here -->
-                    </ul>
-                </section>
-                <section>
-                    <h2>News</h2>
-                    <ul class="custom-list">
-                        <li class="item">News Item 1</li>
-                        <!-- Add more news items here -->
-                    </ul>
-                </section>
-                <section>
-                    <h2>Publications</h2>
-                    <ul class="custom-list">
-                        <li class="item">
-                            <div class="title">Publication Name</div>
-                            <div class="subtitle">Authors</div>
-                            <div class="publication-links">
-                                <a href="https://github.com/pippopelly/publication-repo" target="_blank">GitHub</a>
-                                <a href="/path-to-publication-pippo-pelly.pdf" target="_blank" download>PDF</a>
-                                <a href="/path-to-publication-pippo-pelly.bib" target="_blank" download>BibTeX</a>
-                            </div>
-                        </li>
-                        <!-- Add more publication items here -->
-                    </ul>
-                    <h2>Research Interests</h2>
-                    <ul class="custom-list">
-                        <li class="item">Research Interest 1</li>
-                        <!-- Add more research interests here -->
-                    </ul>
-                </section>
+            <div class="photo-box">
+                <img src="path_to_your_image.jpg" alt="Pippo Pelly">
+            </div>
+            <div class="bio">
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+            <div class="links">
+                <!-- Additional links or content can go here -->
             </div>
         </main>
         <footer>
-            <small>
-                <a href="https://www.privacypolicy.com" target="_blank">Privacy Policy</a> •
-                <a href="https://www.termsofuse.com" target="_blank">Terms of Use</a>
-            </small>
+            <p>&copy; 2024 Pippo Pelly</p>
         </footer>
-    
+    </div>
 </body>
 </html>
