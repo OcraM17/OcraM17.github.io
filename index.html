@@ -2,95 +2,225 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pippo Pelly</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Marco Cotogni</title>
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-        }
-        .container {
-            max-width: 1200px;
-            margin: auto;
-            padding: 0 15px;
-        }
-        header, nav, main, footer {
-            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         header {
-            background: #333;
-            color: #fff;
+            background: #f5f5f5;
+            padding: 0.5rem 0;
             text-align: center;
+            font-size: 2rem;
+            font-weight: bold;
+            margin-bottom: 1rem; /* Reduced space below header */
         }
-        nav ul {
-            list-style: none;
-            padding: 0;
+        .content, .section {
             display: flex;
-            justify-content: center;
-            gap: 10px;
+            flex-direction: column;
+            align-items: center;
+            padding: 1rem; /* Reduced padding */
         }
-        nav ul li a {
+        .photo-bio-links {
+            display: grid;
+            grid-template-columns: auto 1fr auto;
+            gap: 1rem;
+            width: 100%;
+            margin-bottom: 1rem; /* Space between photo/bio/links and sections */
+        }
+        .photo {
+            width: 250px; /* Smaller photo */
+            height: 250px; /* Smaller photo */
+            padding: 1.5rem 5rem;
+            overflow: hidden;
+            align-self: start; /* Align to the top of the column */
+        }
+        .photo img {
+            width: 100%;
+            height: auto;
+            align-items:center;
+        }
+        .bio {
+            text-align: justify;
+            padding: 2rem 8rem;
+        }
+        .nav ul {
+            list-style: none;
+            padding: 2rem 5rem;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.5rem; /* Space between buttons */
+        }
+        
+        .nav button {
+            background-color: #f5f5f5;
+            border: 1px solid #333;
+            border-radius: 5px;
+            padding: 0.5rem 1rem;
+            cursor: pointer;
+            text-align: center;
+            width: 100px;
+        }
+
+        #read-more {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    /* Show 'Read more' link on small screens */
+    #read-more {
+        display: inline;
+    }
+}
+
+        @media (max-width: 768px) {
+            /* Show 'Read more' link on small screens */
+            #read-more {
+                display: inline;
+            }
+        }
+        
+        .nav button a {
             text-decoration: none;
             color: #333;
+            display: block; /* Make the link fill the button */
         }
-        main {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
+        .section {
+            width: 100%;
+            padding: 1rem 0;
         }
-        .photo-box, .bio, .links {
-            flex: 1;
-            min-width: 300px;
+        .section h2 {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
         }
-        .photo-box img {
-            max-width: 100%;
-            height: auto;
-            border-radius: 50%;
-        }
-        footer {
-            background: #333;
-            color: #fff;
-            text-align: center;
-        }
+        /* Responsive adjustments */
         @media (max-width: 768px) {
-            nav ul {
-                flex-direction: column;
-                align-items: center;
+            .photo-bio-links {
+                grid-template-columns: 1fr;
+                text-align: center;
             }
-            .photo-box, .bio, .links {
-                min-width: 100%;
+            .bio, nav ul {
+                order: -1; /* Reorder for mobile */
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <header>
-            <h1>Pippo Pelly</h1>
-        </header>
-        <nav>
-            <ul>
-                <li><a href="https://www.linkedin.com/in/pippopelly">LinkedIn</a></li>
-                <li><a href="https://scholar.google.com/citations?user=pippopelly">Scholar</a></li>
-                <li><a href="https://github.com/pippopelly">GitHub</a></li>
-                <li><a href="mailto:pippopelly@example.com">Mail</a></li>
-                <li><a href="/path-to-pippo-pelly-cv.pdf" download="Pippo_Pelly_CV.pdf">CV</a></li>
-            </ul>
-        </nav>
-        <main>
-            <div class="photo-box">
-                <img src="path_to_your_image.jpg" alt="Pippo Pelly">
+    <header>Marco Cotogni</header>
+    <div class="content">
+        <div class="photo-bio-links">
+            <div class="photo">
+                <img src="assets/photo.jpeg" alt="Marco Cotogni">
             </div>
+            <!-- <div class="bio">
+               
+                <br>
+                I'm into a bunch of different areas in Deep Learning, Computer Vision, and Image Processing, like Continual Learning,
+                Computational Photography, Privacy in Computer Vision and Generative Models.
+                <br>
+                I'm currently based in Pavia, Italy, a university city near Milan.
+                In March 2022, I lived for 6 months in the amazing Barcelona, Spain, where I was a research intern at the Computer Vision Center.
+                Before that, I spent 6 months in Ljubljana, Slovenia, a breathtaking city surrounded by nature.
+                Here is where I worked on my Master's thesis and even though it was March 2020, I still managed to get it done while working half the time from home!
+                <br>
+                When I'm not busy nerding out about computer science, I love sports, especially soccer and basketball. I'm also a nature lover and traveller.
+                <br><br>
+                So, that's a quick rundown of who I am and what I'm up to. I hope you find my journey and research as exciting as I do!
+            </div> -->
             <div class="bio">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                <span id="short-text">Hey there! I'm Marco, a 27-year-old Research Scientist @ Leonardo Labs and a Ph.D. Candidate in Computer Science at the University of Pavia, Italy. </span>
+                <span id="more-text" style="display: none;">I'm into a bunch of different areas in Deep Learning, Computer Vision, and Image Processing, like Continual Learning,
+                    Computational Photography, Privacy in Computer Vision and Generative Models.
+                    <br>
+                    I'm currently based in Pavia, Italy, a university city near Milan.
+                    In March 2022, I lived for 6 months in the amazing Barcelona, Spain, where I was a research intern at the Computer Vision Center.
+                    Before that, I spent 6 months in Ljubljana, Slovenia, a breathtaking city surrounded by nature.
+                    Here is where I worked on my Master's thesis and even though it was March 2020, I still managed to get it done while working half the time from home!
+                    <br>
+                    When I'm not busy nerding out about computer science, I love sports, especially soccer and basketball. I'm also a nature lover and traveller.
+                    <br><br>
+                    So, that's a quick rundown of who I am and what I'm up to. I hope you find my journey and research as exciting as I do!</span>
+                <a href="#" id="read-more" onclick="toggleBio();return false;">Read more</a>
             </div>
-            <div class="links">
-                <!-- Additional links or content can go here -->
-            </div>
-        </main>
-        <footer>
-            <p>&copy; 2024 Pippo Pelly</p>
-        </footer>
+            <nav class="nav">
+                <ul>
+                    <li><button><a href="https://www.linkedin.com/in/marco-cotogni/" target="_blank">LinkedIn</a></button></li>
+                    <li><button><a href="https://scholar.google.com/citations?user=8PUz5lAAAAAJ&hl=it" target="_blank">Scholar</a></button></li>
+                    <li><button><a href="https://github.com/OcraM17" target="_blank">GitHub</a></button></li>
+                    <li><button><a href="mailto:cotogni@proton.me">Mail</a></button></li>
+                    <li><button><a href="assets/New_CV.pdf" download="MC_CV">CV</a></button></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="section" id="news">
+            <h1>!!News!!</h1>
+            <!-- Experience details go here -->
+        </div>
+        <!-- Additional sections for your website -->
+        <div class="section" id="experience">
+            <h2>Experience</h2>
+            <!-- Experience details go here -->
+        </div>
+        <div class="section" id="education">
+            <h2>Education</h2>
+            <!-- Education details go here -->
+        </div>
+        <div class="section" id="pubs">
+            <h2>Publications</h2>
+            <!-- Education details go here -->
+        </div>
     </div>
 </body>
 </html>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    updateBioVisibility();
+
+    // Optionally, handle window resize to adjust bio visibility
+    window.addEventListener('resize', updateBioVisibility);
+});
+
+function updateBioVisibility() {
+    var moreText = document.getElementById("more-text");
+    var readMoreLink = document.getElementById("read-more");
+    var shortText = document.getElementById("short-text");
+
+    // Check if the screen width is less than or equal to 768px
+    if (window.innerWidth <= 768) {
+        // Small screen: Hide the extended part of the bio and show "Read more" link
+        moreText.style.display = "none";
+        shortText.style.display = "inline";
+        readMoreLink.style.display = "inline";
+        readMoreLink.textContent = "Read more";
+    } else {
+        // Large screen: Show the entire bio and hide "Read more" link
+        moreText.style.display = "inline";
+        shortText.style.display = "inline"; // Ensure short text is also visible
+        readMoreLink.style.display = "none";
+    }
+}
+
+function toggleBio() {
+    var moreText = document.getElementById("more-text");
+    var readMoreLink = document.getElementById("read-more");
+    var shortText = document.getElementById("short-text");
+
+    if (moreText.style.display === "none") {
+        moreText.style.display = "inline";
+        readMoreLink.textContent = "Read less";
+    } else {
+        moreText.style.display = "none";
+        readMoreLink.textContent = "Read more";
+    }
+}
+
+
+    </script>
